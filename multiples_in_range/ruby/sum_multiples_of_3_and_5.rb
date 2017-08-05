@@ -1,6 +1,6 @@
-require_relative 'lib/multiples_in_range'
+require_relative 'lib/number_multiples'
 n = gets.strip.to_i
-sum = MultiplesInRange.new(n)
+sum = NumberMultiples.new(n)
 
 puts sum.sum_multiples_of(3) +
      sum.sum_multiples_of(5) -

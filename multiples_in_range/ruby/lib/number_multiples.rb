@@ -1,5 +1,5 @@
 # Class to perform a generic sum of multiples
-class MultiplesInRange
+class NumberMultiples
   def initialize(range)
     raise unless range.is_a?(Numeric)
     @n = range

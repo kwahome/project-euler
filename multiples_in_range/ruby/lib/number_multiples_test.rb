@@ -1,10 +1,10 @@
-require_relative 'multiples_in_range'
+require_relative 'number_multiples'
 require 'test/unit'
 
 # Testing sum of multiples
-class TestMultiplesInRange < Test::Unit::TestCase
+class NumberMultiplesTest < Test::Unit::TestCase
   def setup
-    @sum = MultiplesInRange.new(10)
+    @sum = NumberMultiples.new(10)
   end
 
   def test_count
