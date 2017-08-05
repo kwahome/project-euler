@@ -1,25 +1,22 @@
 import unittest
-import number_multiples.NumberMultiples
+from number_multiples import NumberMultiples
 
 
 class NumberMultiplesTest(unittest.TestCase):
-
     """Test class NumberMultiples"""
     def setUp(self):
-        self.n = 10
+        self.multiples = NumberMultiples(n=10)
 
-    def count_multiples_of(self, divisor):
-        return (self.n - 1) / divisor
+    def test_count(self):
+        self.assertEqual(self.multiples.count_multiples_of(3), 3)
 
-    def list_multiples_of(self, divisor):
-        multiples = {}
-        count = (self.n - 1) / divisor
+    def test_list(self):
+        expected = {
+            1: 3,
+            2: 6,
+            3: 9
+        }
+        self.assertEqual(expected, self.multiples.list_multiples_of(3))
 
-        for index in range(1, count):
-            multiples[index] = index * divisor
-
-        return multiples
-
-    def sum_multiples_of(self, divisor):
-        count = (self.n - 1) / divisor
-        return (count * (count + 1) / 2) * divisor
+    def test_sum(self):
+        self.assertEqual(18, self.multiples.sum_multiples_of(3))

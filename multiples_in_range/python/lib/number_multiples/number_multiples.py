@@ -1,6 +1,11 @@
 class NumberMultiples:
     """Multiples of numbers in range"""
     def __init__(self, n):
+        try:
+            int(n)
+        except ValueError:
+            raise ValueError
+
         self.n = n
 
     def count_multiples_of(self, divisor):
@@ -10,8 +15,9 @@ class NumberMultiples:
         multiples = {}
         count = (self.n - 1) / divisor
 
-        for index in range(1, count):
-            multiples[index] = index * divisor
+        for index in range(0, count):
+            factor = index + 1
+            multiples[factor] = factor * divisor
 
         return multiples
 
