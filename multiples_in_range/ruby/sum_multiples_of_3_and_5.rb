@@ -2,6 +2,4 @@ require_relative 'lib/number_multiples'
 n = gets.strip.to_i
 sum = NumberMultiples.new(n)
 
-puts sum.sum_multiples_of(3) +
-     sum.sum_multiples_of(5) -
-     sum.sum_multiples_of(3 * 5)
+puts sum.sum_multiples_of(3, 5)
