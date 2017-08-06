@@ -9,8 +9,8 @@ class NumberMultiples:
 
     def _number(self, number):
         try:
-            number = int(number)
-            result = True, number
+            num = int(number)
+            result = True, num
         except Exception as e:
             result = False, e
         return result
