@@ -31,7 +31,6 @@ class NumberMultiples:
             for index in range(0, count):
                 factor = index + 1
                 multiples[factor] = factor * number
-
             response = multiples
         else:
             response = "[ValueError]: {divisor} is not a number".format(divisor=divisor)
