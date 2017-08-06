@@ -9,9 +9,7 @@ def main():
 
     m = NumberMultiples(n=n)
 
-    print(m.count_multiples_of(3))
-    print(m.list_multiples_of('3'))
-    print(m.sum_multiples_of('a', 5))
+    print(m.sum_multiples_of(3, 5))
 
 if __name__ == '__main__':
     main()
