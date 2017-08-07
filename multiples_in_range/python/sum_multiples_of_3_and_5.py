@@ -1,15 +1,13 @@
-from lib.number_multiples.number_multiples import NumberMultiples
+def sum_of_multiples(n=0, d=0):
+    multiples = int((n-1) / d)
+    return int((multiples * (multiples + 1) / 2) * d)
 
 
 def main():
-    try:
+    t = int(input("How many times to run? "))
+    for i in range(0, t):
         n = int(input("The maximum range of numbers? "))
-    except ValueError:
-        print("This is not a positive number")
-
-    m = NumberMultiples(n=n)
-
-    print(m.sum_multiples_of(3, 5))
+        print(sum_of_multiples(n, 3)+sum_of_multiples(n, 5)-sum_of_multiples(n, 3*5))
 
 if __name__ == '__main__':
     main()
