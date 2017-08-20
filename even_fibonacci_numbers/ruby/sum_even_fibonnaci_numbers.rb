@@ -14,7 +14,7 @@ def even_fibonacci_sum(n)
   end
 end
 t = gets.strip.to_i
-for i in 0..t-1
+1.upto(t) do
   n = gets.strip.to_i
   puts even_fibonacci_sum(n)
 end
